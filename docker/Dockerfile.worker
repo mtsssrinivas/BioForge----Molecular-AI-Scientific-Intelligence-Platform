@@ -1,0 +1,22 @@
+# Dockerfile for BioForge Celery Worker
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system libraries required for RDKit and PostgreSQL
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    libxrender1 \
+    libxext6 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+COPY backend/requirements.txt /app/backend/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r /app/backend/requirements.txt
+
+# Copy project source
+COPY . /app
+
+CMD ["celery", "-A", "backend.app.workers.celery_app", "worker", "--loglevel=info", "--concurrency=2"]
