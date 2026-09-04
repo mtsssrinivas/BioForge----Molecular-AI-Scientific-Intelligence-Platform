@@ -1,0 +1,21 @@
+# Render Infrastructure as Code Blueprint
+# Reference: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: bioforge-backend
+    runtime: docker
+    dockerfilePath: docker/Dockerfile.backend
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: HOST
+        value: "0.0.0.0"
