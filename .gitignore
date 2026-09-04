@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & Packages
+.env
+.env.local
+.venv/
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Large ML model artifacts and binaries (metadata/json configs are tracked)
+models/*.pt
+models/*.pth
+models/*.bin
+models/*.ubj
+
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Database & runtime
+*.sqlite
+*.sqlite3
+data/external/large_*
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
