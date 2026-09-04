@@ -1,0 +1,41 @@
+[
+  {
+    "title": "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure",
+    "authors": "John S. Delaney",
+    "source": "Journal of Chemical Information and Computer Sciences",
+    "publication_year": 2004,
+    "doi": "10.1021/ci034243x",
+    "abstract": "A model for estimating the aqueous solubility of organic compounds directly from molecular structure is presented. The model uses calculated octanol-water partition coefficients (LogP), molecular weight (MW), rotatable bond count, and aromatic proportion. Aqueous solubility (LogS) is shown to correlate strongly with hydrophobic surface area and molecular rigidity, with an empirical linear fit delivering an RMSE of approximately 0.58 log units across diverse drug-like molecules.",
+    "full_text": "Methods: The Delaney ESOL linear regression relies on four key parameters: (1) cLogP, (2) Molecular Weight, (3) Number of Rotatable Bonds, and (4) Aromatic Proportion defined as the ratio of aromatic heavy atoms to total heavy atoms. Aromatic compounds exhibit decreased solubility due to strong crystal packing energy in the solid state.",
+    "metadata": {"topic": "solubility", "dataset": "ESOL"}
+  },
+  {
+    "title": "Neural Message Passing for Quantum Chemistry and Molecular Property Prediction",
+    "authors": "Justin Gilmer, Samuel S. Schoenholz, Patrick F. Riley, Oriol Vinyals, George E. Dahl",
+    "source": "ICML / J. Chem. Theory Comput.",
+    "publication_year": 2017,
+    "doi": "10.48550/arXiv.1704.01212",
+    "abstract": "Message Passing Neural Networks (MPNNs) establish a unified framework for predicting quantum chemical and physical properties of molecules from graph structures. Nodes correspond to individual atoms and edges correspond to covalent chemical bonds. Iterative message updates propagate chemical context across the graph, capturing non-local electronic interactions without precomputed fixed fingerprints.",
+    "full_text": "Results: MPNN architectures achieve state-of-the-art predictive performance on QM9 and MoleculeNet benchmarks by jointly updating atom embeddings through bond feature matrices, outperforming conventional fingerprint-based random forests on non-linear molecular topologies.",
+    "metadata": {"topic": "gnn", "architecture": "MPNN"}
+  },
+  {
+    "title": "Molecular Descriptors and QSAR Modeling in Drug Discovery",
+    "authors": "Roberto Todeschini, Viviana Consonni",
+    "source": "Wiley Handbook of Molecular Descriptors",
+    "publication_year": 2008,
+    "doi": "10.1002/9783527613106",
+    "abstract": "Physicochemical descriptors encode constitutional, topological, and electronic properties of chemical entities. Topological Polar Surface Area (TPSA) and Hydrogen Bond Acceptor/Donor counts govern passive membrane permeability and human gastrointestinal absorption according to Lipinski's Rule of Five and Veber's bioavailability criteria.",
+    "full_text": "Molecules possessing TPSA < 140 A^2 and rotatable bonds <= 10 exhibit high oral bioavailability. Hydrophobic partition coefficient (LogP) regulates both aqueous dissolution rates and blood-brain barrier transport.",
+    "metadata": {"topic": "qspr", "rule": "Lipinski"}
+  },
+  {
+    "title": "Graph Convolutional Policy Networks for Goal-Directed Molecular Generation",
+    "authors": "Jiaxian You, Bowen Liu, Rex Ying, Vijay Pande, Jure Leskovec",
+    "source": "NeurIPS",
+    "publication_year": 2018,
+    "doi": "10.48550/arXiv.1806.02473",
+    "abstract": "Graph convolutional networks combined with reinforcement learning optimize target molecular properties while preserving chemical validity rules enforced by valence constraints in RDKit. Iterative bond and atom additions produce novel drug candidates satisfying multi-objective optimization criteria.",
+    "metadata": {"topic": "gnn", "generation": true}
+  }
+]
