@@ -1,0 +1,89 @@
+{
+  "experiment_id": "EXP-GNN-20260904_131006",
+  "experiment_name": "gnn_esol_model",
+  "model_type": "gnn",
+  "task_type": "regression",
+  "dataset_name": "esol_processed",
+  "dataset_hash": "f4c2c216891df3d5",
+  "split_config": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "random_seed": 42,
+    "stratify": false
+  },
+  "feature_config": {
+    "representation": "molecular_graph",
+    "node_dim": 20,
+    "edge_dim": 7
+  },
+  "hyperparameters": {
+    "epochs": 50,
+    "batch_size": 16,
+    "learning_rate": 0.003,
+    "hidden_dim": 64,
+    "num_layers": 3,
+    "dropout": 0.1,
+    "random_seed": 42,
+    "loss_history": {
+      "train": [
+        3.6805,
+        2.8974,
+        2.172,
+        2.0611,
+        1.9788,
+        1.4856,
+        1.0539,
+        1.1403,
+        0.846,
+        0.8433,
+        0.6522,
+        0.6112,
+        0.7448,
+        0.5639,
+        0.4798,
+        0.5585,
+        0.4794,
+        0.4351,
+        0.4062,
+        0.3618
+      ],
+      "val": [
+        9.6766,
+        7.8935,
+        7.4679,
+        7.4677,
+        5.2568,
+        2.8061,
+        1.5846,
+        1.5509,
+        1.6888,
+        1.9652,
+        2.4056,
+        2.5628,
+        3.0813,
+        2.653,
+        2.6519,
+        2.4255,
+        2.3262,
+        2.4623,
+        2.5733,
+        2.5054
+      ]
+    }
+  },
+  "metrics_val": {
+    "mae": 1.2104,
+    "rmse": 1.5828,
+    "r2": 0.6511
+  },
+  "metrics_test": {
+    "mae": 0.6002,
+    "rmse": 0.7008,
+    "r2": 0.3513
+  },
+  "training_duration_seconds": 3.163,
+  "model_artifact_path": "D:\\Projects\\BioForge\\models\\gnn_esol_model_20260904_131006.pt",
+  "created_at": "2026-09-04T13:10:06.282150+00:00",
+  "feature_importance": null
+}

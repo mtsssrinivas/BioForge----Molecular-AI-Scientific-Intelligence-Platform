@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-GNN-20260904_130950",
+  "experiment_name": "test_gnn_exp",
+  "model_type": "gnn",
+  "task_type": "regression",
+  "dataset_name": "esol_processed",
+  "dataset_hash": "f4c2c216891df3d5",
+  "split_config": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "random_seed": 42,
+    "stratify": false
+  },
+  "feature_config": {
+    "representation": "molecular_graph",
+    "node_dim": 20,
+    "edge_dim": 7
+  },
+  "hyperparameters": {
+    "epochs": 5,
+    "batch_size": 16,
+    "learning_rate": 0.003,
+    "hidden_dim": 32,
+    "num_layers": 2,
+    "dropout": 0.1,
+    "random_seed": 42,
+    "loss_history": {
+      "train": [
+        4.1531,
+        2.7018,
+        2.3989,
+        2.398,
+        2.7477
+      ],
+      "val": [
+        10.4673,
+        8.5998,
+        8.1692,
+        8.1719,
+        8.0873
+      ]
+    }
+  },
+  "metrics_val": {
+    "mae": 2.4731,
+    "rmse": 2.8438,
+    "r2": -0.1262
+  },
+  "metrics_test": {
+    "mae": 0.9977,
+    "rmse": 1.0565,
+    "r2": -0.4744
+  },
+  "training_duration_seconds": 1.989,
+  "model_artifact_path": "D:\\Projects\\BioForge\\models\\test_gnn_exp_20260904_130950.pt",
+  "created_at": "2026-09-04T13:09:50.491727+00:00",
+  "feature_importance": null
+}

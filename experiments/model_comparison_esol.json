@@ -1,0 +1,35 @@
+{
+  "dataset_name": "esol_processed",
+  "dataset_hash": "f4c2c216891df3d5",
+  "split_identical": true,
+  "models": {
+    "xgboost": {
+      "experiment_id": "EXP-XGB-20260904_130536",
+      "model_type": "XGBoost (RDKit Descriptors + Morgan FP)",
+      "metrics_test": {
+        "mae": 0.4251,
+        "rmse": 0.5183,
+        "r2": 0.6452
+      },
+      "training_duration_seconds": 0.744,
+      "artifact": "D:\\Projects\\BioForge\\models\\xgboost_esol_baseline_20260904_130536.json"
+    },
+    "gnn": {
+      "experiment_id": "EXP-GNN-20260904_131006",
+      "model_type": "PyTorch Message-Passing GNN",
+      "metrics_test": {
+        "mae": 0.6002,
+        "rmse": 0.7008,
+        "r2": 0.3513
+      },
+      "training_duration_seconds": 3.163,
+      "artifact": "D:\\Projects\\BioForge\\models\\gnn_esol_model_20260904_131006.pt"
+    }
+  },
+  "summary": {
+    "lower_test_rmse_winner": "XGBoost",
+    "higher_test_r2_winner": "XGBoost",
+    "rmse_difference": 0.1825,
+    "r2_difference": 0.2939
+  }
+}
