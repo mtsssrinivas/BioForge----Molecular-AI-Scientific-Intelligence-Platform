@@ -8,7 +8,6 @@ from typing import Dict, Any, Optional, Tuple, List
 import numpy as np
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors, AllChem
-from rdkit.Chem.Draw import rdMolDraw2D
 from backend.app.core.logging import logger
 
 
@@ -89,6 +88,7 @@ def smiles_to_svg(smiles: str, width: int = 300, height: int = 200) -> Optional[
     if mol is None:
         return None
     try:
+        from rdkit.Chem.Draw import rdMolDraw2D
         mol = Chem.Mol(mol)
         AllChem.Compute2DCoords(mol)
         drawer = rdMolDraw2D.MolDraw2DSVG(width, height)

@@ -3,16 +3,14 @@ API Router V1 Aggregator
 """
 
 from fastapi import APIRouter
-from backend.app.api.v1.endpoints import (
-    health,
-    molecules,
-    predictions,
-    models,
-    experiments,
-    literature,
-    rag,
-    jobs,
-)
+from backend.app.api.v1.endpoints import health
+from backend.app.api.v1.endpoints import molecules
+from backend.app.api.v1.endpoints import predictions
+from backend.app.api.v1.endpoints import models
+from backend.app.api.v1.endpoints import experiments
+from backend.app.api.v1.endpoints import literature
+from backend.app.api.v1.endpoints import rag
+from backend.app.api.v1.endpoints import jobs
 
 api_router = APIRouter()
 

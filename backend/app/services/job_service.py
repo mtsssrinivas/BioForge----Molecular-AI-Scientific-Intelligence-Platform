@@ -11,8 +11,6 @@ from datetime import datetime, timezone
 from typing import Dict, Any, Optional, AsyncGenerator, List
 
 from backend.app.schemas.job import JobStatus, JobType, JobResponse, JobProgressEvent
-from backend.app.ml.evaluate_xgb import predict_smiles
-from backend.app.ml.train_gnn import predict_gnn_smiles
 from backend.app.core.logging import logger
 
 
@@ -123,6 +121,7 @@ class JobManager:
             await asyncio.sleep(0.3)
 
             if model_type.lower() == "gnn":
+                from backend.app.ml.train_gnn import predict_gnn_smiles
                 pred_val = predict_gnn_smiles(smiles)
                 pred_dict = {
                     "smiles": smiles,
@@ -131,6 +130,7 @@ class JobManager:
                     "unit": "log mol/L",
                 }
             else:
+                from backend.app.ml.evaluate_xgb import predict_smiles
                 pred_res = predict_smiles(smiles)
                 pred_dict = pred_res.model_dump()
 

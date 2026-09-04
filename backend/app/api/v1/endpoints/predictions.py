@@ -8,7 +8,6 @@ from sqlalchemy.orm import Session
 
 from backend.app.db.session import get_db
 from backend.app.schemas.ml import PredictionRequest, PredictionResponse
-from backend.app.ml.evaluate_xgb import predict_smiles
 from backend.app.services.repository import PredictionRepository, ExperimentRepository
 
 router = APIRouter(prefix="/predictions", tags=["Predictions"])
@@ -16,6 +15,7 @@ router = APIRouter(prefix="/predictions", tags=["Predictions"])
 
 @router.post("", response_model=PredictionResponse)
 def create_prediction(req: PredictionRequest, db: Session = Depends(get_db)):
+    from backend.app.ml.evaluate_xgb import predict_smiles
     t0 = time.time()
     try:
         res = predict_smiles(req.smiles)

@@ -10,12 +10,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PORT=10000 \
     HOST=0.0.0.0
 
-# Install system libraries required for RDKit and PostgreSQL
+# Install system libraries required for RDKit, OpenCV/Cairo, and PostgreSQL
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
     libxrender1 \
     libxext6 \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libx11-6 \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
