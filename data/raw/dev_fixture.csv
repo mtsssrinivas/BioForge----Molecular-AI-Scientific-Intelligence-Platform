@@ -1,0 +1,9 @@
+compound_id,smiles,solubility
+DEV-01,CC(=O)Oc1ccccc1C(=O)O,-1.31
+DEV-02,INVALID_SMILES_STRING,-9.99
+DEV-03,CCO,0.50
+DEV-04,c1ccccc1,
+DEV-05,CC(=O)Oc1ccccc1C(=O)O,-1.31
+DEV-06,,1.20
+DEV-07,c1ccccc1,NaN_NOT_A_NUMBER
+DEV-08,c1ccccc1,-2.13

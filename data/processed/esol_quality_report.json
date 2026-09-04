@@ -1,0 +1,76 @@
+{
+  "dataset_name": "esol",
+  "total_records": 50,
+  "valid_molecules": 50,
+  "invalid_molecules": 0,
+  "duplicate_records": 0,
+  "missing_targets": 0,
+  "processed_records": 50,
+  "feature_statistics": {
+    "target": {
+      "mean": -1.5644,
+      "std": 1.747877032988585,
+      "min": -6.55,
+      "max": 1.2,
+      "median": -1.29
+    },
+    "molecular_weight": {
+      "mean": 121.43587999999998,
+      "std": 40.836753055400415,
+      "min": 46.069,
+      "max": 206.28499999999997,
+      "median": 116.16199999999998
+    },
+    "logp": {
+      "mean": 1.5764008000000005,
+      "std": 1.1348255201101294,
+      "min": -1.0293,
+      "max": 4.007000000000002,
+      "median": 1.4758399999999998
+    },
+    "tpsa": {
+      "mean": 25.0922,
+      "std": 20.53976862238775,
+      "min": 0.0,
+      "max": 69.11,
+      "median": 25.9
+    },
+    "h_bond_donors": {
+      "mean": 0.52,
+      "std": 0.6141195788629907,
+      "min": 0.0,
+      "max": 2.0,
+      "median": 0.0
+    },
+    "h_bond_acceptors": {
+      "mean": 1.04,
+      "std": 0.8561899465012398,
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0
+    },
+    "rotatable_bonds": {
+      "mean": 1.06,
+      "std": 1.3156824875946573,
+      "min": 0.0,
+      "max": 5.0,
+      "median": 1.0
+    },
+    "heavy_atom_count": {
+      "mean": 8.42,
+      "std": 2.921349981478719,
+      "min": 3.0,
+      "max": 15.0,
+      "median": 8.0
+    },
+    "ring_count": {
+      "mean": 0.84,
+      "std": 0.7655863432556721,
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0
+    }
+  },
+  "malformed_records": [],
+  "created_at": "2026-09-04T10:44:35.280804+00:00"
+}
