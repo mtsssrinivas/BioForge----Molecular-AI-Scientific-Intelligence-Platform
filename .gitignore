@@ -35,6 +35,7 @@ frontend/.vite/
 # Database & runtime
 *.sqlite
 *.sqlite3
+*.db
 data/external/large_*
 
 # IDE & OS
