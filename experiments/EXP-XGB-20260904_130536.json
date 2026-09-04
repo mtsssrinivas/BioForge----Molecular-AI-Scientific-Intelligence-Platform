@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-XGB-20260904_130536",
+  "experiment_name": "xgboost_esol_baseline",
+  "model_type": "xgboost",
+  "task_type": "regression",
+  "dataset_name": "esol_processed",
+  "dataset_hash": "f4c2c216891df3d5",
+  "split_config": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "random_seed": 42,
+    "stratify": false
+  },
+  "feature_config": {
+    "use_descriptors": true,
+    "use_fingerprints": true,
+    "fingerprint_bits": 1024
+  },
+  "hyperparameters": {
+    "n_estimators": 150,
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "early_stopping_rounds": 10,
+    "random_seed": 42
+  },
+  "metrics_val": {
+    "mae": 0.5958,
+    "rmse": 0.7543,
+    "r2": 0.9208
+  },
+  "metrics_test": {
+    "mae": 0.4251,
+    "rmse": 0.5183,
+    "r2": 0.6452
+  },
+  "training_duration_seconds": 0.744,
+  "model_artifact_path": "D:\\Projects\\BioForge\\models\\xgboost_esol_baseline_20260904_130536.json",
+  "created_at": "2026-09-04T13:05:36.246748+00:00",
+  "feature_importance": {
+    "logp": 0.2365160435438156,
+    "fp_bit_356": 0.20155909657478333,
+    "tpsa": 0.0684996023774147,
+    "fp_bit_173": 0.04809379577636719,
+    "fp_bit_465": 0.04022505506873131,
+    "fp_bit_807": 0.03987296670675278,
+    "fp_bit_283": 0.03893929719924927,
+    "fp_bit_698": 0.03854064643383026,
+    "h_bond_acceptors": 0.028647441416978836,
+    "rotatable_bonds": 0.017145922407507896,
+    "ring_count": 0.01592155173420906,
+    "fp_bit_961": 0.012774167582392693,
+    "fp_bit_33": 0.011282759718596935,
+    "heavy_atom_count": 0.009875575080513954,
+    "fp_bit_11": 0.008301652036607265
+  }
+}

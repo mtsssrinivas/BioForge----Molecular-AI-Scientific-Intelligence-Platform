@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-XGB-20260904_130518",
+  "experiment_name": "test_xgb_exp",
+  "model_type": "xgboost",
+  "task_type": "regression",
+  "dataset_name": "esol_processed",
+  "dataset_hash": "f4c2c216891df3d5",
+  "split_config": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "random_seed": 42,
+    "stratify": false
+  },
+  "feature_config": {
+    "use_descriptors": true,
+    "use_fingerprints": true,
+    "fingerprint_bits": 1024
+  },
+  "hyperparameters": {
+    "n_estimators": 30,
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "early_stopping_rounds": 10,
+    "random_seed": 42
+  },
+  "metrics_val": {
+    "mae": 0.7916,
+    "rmse": 1.0755,
+    "r2": 0.8389
+  },
+  "metrics_test": {
+    "mae": 0.5412,
+    "rmse": 0.5843,
+    "r2": 0.5491
+  },
+  "training_duration_seconds": 0.333,
+  "model_artifact_path": "D:\\Projects\\BioForge\\models\\test_xgb_exp_20260904_130518.json",
+  "created_at": "2026-09-04T13:05:18.427597+00:00",
+  "feature_importance": {
+    "logp": 0.248338520526886,
+    "tpsa": 0.13767962157726288,
+    "fp_bit_173": 0.09075535833835602,
+    "heavy_atom_count": 0.050586801022291183,
+    "fp_bit_807": 0.0424724817276001,
+    "fp_bit_389": 0.04127267375588417,
+    "fp_bit_698": 0.029553111642599106,
+    "fp_bit_63": 0.02620352990925312,
+    "fp_bit_147": 0.024329179897904396,
+    "fp_bit_80": 0.02185143157839775,
+    "fp_bit_831": 0.02079945057630539,
+    "h_bond_acceptors": 0.02046271041035652,
+    "molecular_weight": 0.019900893792510033,
+    "rotatable_bonds": 0.016761021688580513,
+    "fp_bit_893": 0.01569531485438347
+  }
+}
