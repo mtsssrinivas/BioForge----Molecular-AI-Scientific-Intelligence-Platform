@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://your-bioforge-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/health",
+      "destination": "https://your-bioforge-backend.onrender.com/health"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
